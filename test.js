@@ -1,0 +1,1 @@
+fetch('https://open.spotify.com/track/6Z9UJm9A0qYXwqmMM9qfe2').then(r=>r.text()).then(t => { const title = t.match(/<meta property="og:title" content="(.*?)"/i); const img = t.match(/<meta property="og:image" content="(.*?)"/i); const desc = t.match(/<meta property="og:description" content="(.*?)"/i); console.log({ title: title?.[1], img: img?.[1], desc: desc?.[1] }) })
